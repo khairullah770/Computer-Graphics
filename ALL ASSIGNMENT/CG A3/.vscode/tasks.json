@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run OpenGL",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-Iinclude",                 // Include headers
+        "-Llib",                     // Link libraries
+        "Source.cpp",               // Your source file name
+        "-lglew32",
+        "-lfreeglut",
+        "-lopengl32",
+        "-o", "main.exe",
+        "&&", "./main.exe"          // Run after build
+      ],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
